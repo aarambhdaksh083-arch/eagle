@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="home.css">
+  <script src="home.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>AARAMBH DAKSH E-COMMERCE WEB PROJECT 5</title>
+  
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#0a84ff">
+<link rel="apple-touch-icon" href="/icons/icon-192.png">
+
+</head>
+<body>
+
+ 
+ 
+  <!-- ===== NAVBAR ===== -->
+  <nav>
+    <div class="logo"> Aarambh Daksh Shop</div>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#myabout" onclick="about()">About us</a>
+      <a href="#contact">Contact us</a>
+    </div>
+
+    <div class="profile" onclick="toggleProfileMenu()">
+      <img id="profilePic" src="default.png" alt="Profile">
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </nav>
+
+  <!-- ===== PROFILE MENU ===== -->
+  <div class="profile-menu" id="profileMenu">
+    <p><b>नाम:</b> <span id="userName">Guest</span></p>
+    <p><b>ईमेल:</b> <span id="userEmail">guest@example.com</span></p>
+    <label>📷 नई फोटो चुनें:</label>
+    <input type="file" accept="image/*" onchange="changePic(event)">
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </div>
+
+
+
+
+
+  
+
+   
+ <!-- 🛒 Cart Icon with Count -->
+ <div id="cart-icon">
+  <i class="fas fa-shopping-cart"></i>
+ 
+  <div id="cart-count">0</div>
+</div>
+
+<!-- Cart Popup -->
+<div id="cart-popup"></div>
+
+
+ 
+ 
+  
+  <div id="helper-div">
+    <a href="#men-section">Men Wear</a>
+    <a href="#women-section" onclick="show1()">Women Wear</a>
+    <a href="#toys-section" onclick="show2()">Toys</a>
+    <a href="#watches-section" onclick="show3()">Watchs</a>
+    <a href="#shoes-section" onclick="show4()">Shoes</a>
+    </div>
+<main id="home">
+
+<!--men div clothes section  -->
+  <div id="men-div">
+    <section id="men-section">
+
+
+<!--image slider -->
+<div>
+  <img id="slider" src="img1.jpeg" alt="Slideshow">
+
+</div>
+    
+
+
+      <div>
+        <img src="https://media.istockphoto.com/id/1093999178/photo/young-handsome-man-isolated-on-gray-textured-wall-smiling-while-pointing-with-index-finger-to.webp?a=1&b=1&s=612x612&w=0&k=20&c=S1CPKyaNRg11CH0XtFX_mGGGO-WHuQCw5yG6n-sswJE=" alt="black t-shirt">
+        <h1>BLACK T-SHIRT</h1>
+        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+        <p>PRICE-700.00</p>
+        <button onclick="addToCart('BLACK T-SHIRT',700
+        )">ADD TO CART</button>
+      </div>
+
+
+      <div>
+        <img src="https://media.istockphoto.com/id/1128678986/photo/portrait-of-a-handsome-indian-man.webp?a=1&b=1&s=612x612&w=0&k=20&c=b-NqiH3Bm8yv2WWaW3uifeqmvPiT_bvA51d5Ybbders=" alt="JACKET">
+        <h1>BLUE JACKET</h1>
+        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+       <P>PRICE-1000.00</P>
+        <button onclick="addToCart('BLUE JACKET',1000)">ADD TO CART</button>
+      </div>
+
+      
+      <div>
+        <img src="https://images.unsplash.com/photo-1675408824613-27a7e7b8d475?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Q09BVCUyMEZPUiUyME1BTnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500" alt="COAT">
+        <h1>GRAY COAT</h1>
+        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+        <P>PRICE-2000.00</P>
+        <button onclick="addToCart('GRAY-COAT',2000)">ADD TO CART</button>
+      </div>
+
+      
+      <div>
+        <img src="https://images.unsplash.com/photo-1633655442168-c6ef0ed2f984?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Q09BVCUyMEZPUiUyME1BTnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500" alt="COAT">
+        <h1>BROWN COAT</h1>
+        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+        <P>PRICE-2100.00</P>
+        <button onclick="addToCart('BROWN-COAT',2100)">ADD TO CART</button>
+      </div>
+
+
+      
+      <div>
+        <img src="https://images.unsplash.com/photo-1737508945707-ebdccee97cc5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fENPQVQlMjBGT1IlMjBNQU58ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500" alt="COAT">
+        <h1>PEACH COAT</h1>
+        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+       <P>PRICE-2500.00</P>
+        <button onclick="addToCart('PEACH-COAT',2500)">ADD TO CART</button>
+      </div>
+
+
+      
+      <div>
+        <img src="https://images.unsplash.com/photo-1648111145022-1af83031ade6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fENPQVQlMjBGT1IlMjBNQU58ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500" alt="BLACK COAT">
+        <h1>BLACK COAT</h1>
+        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+        <P>PRICE-2900.00</P>
+        <button onclick="addToCart('BLACK-COAT',2900)">ADD TO CART</button>
+      </div>
+
+
+
+      
+      <div>
+        <img src="https://images.unsplash.com/photo-1660776864454-628551d83a2c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fENPQVQlMjBGT1IlMjBNQU58ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500" alt="BROWN COAT">
+        <h1>BROWN COAT 2</h1>
+        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+        <P>PRICE-2000.00</P>
+        <button onclick="addToCart('BROWN-COAT2',2000)">ADD TO CART</button>
+      </div>
+
+
+      
+      <div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoZ6mFf9kg8xwU8HHP7KDFjB47kReuRfmhaw&s" alt="T-SHIRT">
+        <h1>FANCY T-SHIRT</h1>
+        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+        <p>PRICE-950.00</p>
+        <button onclick="addToCart('FANCY T-SHIRT',950)">ADD TO CART</button>
+      </div>
+
+      
+      
+      <div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2cTSuXC6THXJhPmlxhCLIQgHAj8sdi_K1Qw&s" alt="WHITE T-SHIRT">
+        <h1>WHITE T-SHIRT</h1>
+        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+        <p>PRICE-1000.00</p>
+        <button onclick="addToCart('WHITE T-SHIRT', 1000)">ADD TO CART</button>
+      </div>
+
+      
+      <div>
+        <img src="https://triprindia.com/cdn/shop/files/3.1_e5dffbdb-a071-4248-a973-fd919300796e.jpg?v=1758184028&width=1200" alt="INDIGO T-SHIRT">
+        <h1></h1>
+        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+        <p>PRICE-1200.00</p>
+        <button onclick="addToCart('INDIGO T-SHIRT',1200)">ADD TO CART</button>
+      </div>
+
+      
+      <div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMrAdhNPAZONLWmUgEgvAbSOw2XI9Gy8IaEA&s" alt="T-SHIRT">
+        <h1></h1>
+        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+        <p>PRICE-1000.00</p>
+        <button onclick="addToCart('T-SHIRT',1000)">ADD TO CART</button>
+      </div>
+     
+
+    </section>
+  </div>
+
+  <!--LADIES DIV SECTION-->
+
+  <div id="women-div">
+    <section id="women-section">
+
+      
+      <div>
+        <img src="https://images.unsplash.com/photo-1735553816811-7f8bb61fbf08?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bGFkaWVzJTIwY2xvdGhlc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500" alt="LONG FROK">
+        <h1>LONG FROCK1</h1>
+        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+        <p>PRICE-1200.00</p>
+        <button onclick="addToCart('LONG FROCK',1200)">ADD TO CART</button>
+      </div>
+     
+
+      <div>
+        <img src="https://images.unsplash.com/photo-1735553816869-9ebc8b1a17ef?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bGFkaWVzJTIwY2xvdGhlc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500" alt="BLACK KURTI 1">
+        <h1>BLACK KURTI 1</h1>
+        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+        <p>PRICE-1000.00</p>
+        <button onclick="addToCart('BLACK KURTI 1',1000)">ADD TO CART</button>
+      </div>
+     
+
+
+
+      <div>
+        <img src="https://images.unsplash.com/photo-1735553816867-88cd8496df58?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGxhZGllcyUyMGNsb3RoZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500" alt="KURTI">
+        <h1>PINK KURTI 2 </h1>
+        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+        <p>PRICE-1000.00</p>
+        <button onclick="addToCart('PINK KKURTI 2',1000)">ADD TO CART</button>
+      </div>
+     
+
+
+
+
+
+      <div>
+        <img src="https://images.unsplash.com/photo-1590330297626-d7aff25a0431?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d29tZW4lMjBjbG90aGluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500" alt="">
+        <h1>BLACK WITH JEANS</h1>
+        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+        <p>PRICE-2500.00</p>
+        <button onclick="addToCart('BLACK JACKET WITH JEANS',2500)">ADD TO CART</button>
+      </div>
+     
+
+
+
+
+
+      <div>
+        <img src="https://images.unsplash.com/photo-1614786269829-d24616faf56d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8d29tZW4lMjBjbG90aGluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500" alt="">
+        <h1>BLACK COAT WITH JEANS</h1>
+        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+        <p>PRICE-2600.00</p>
+        <button onclick="addToCart('BLACK COAT WITH JEANS',2600)">ADD TO CART</button>
+      </div>
+     
+
+
+
+
+      <div>
+        <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHdvbWVuJTIwY2xvdGhpbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500" alt="">
+        <h1>BONJO</h1>
+        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+        <p>PRICE-500.00</p>
+        <button onclick="addToCart('BONJO',500)">ADD TO CART</button>
+      </div>
+     
+
+
+
+
+      <div>
+        <img src="https://images.unsplash.com/photo-1731911656286-92bf1ebc87f3?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHdvbWVuJTIwY2xvdGhpbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500" alt="">
+        <h1>CO-SET</h1>
+        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+        <p>PRICE-1200.00</p>
+        <button onclick="addToCart('CO-SET',1200)">ADD TO CART</button>
+      </div>
+     
+
+
+      <div>
+        <img src="https://images.unsplash.com/photo-1571513800374-df1bbe650e56?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZmFzaGlvbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500" alt="">
+        <h1>PEACH COAT 2</h1>
+        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+        <p>PRICE-2000.00</p>
+        <button onclick="addToCart('PEACH COAT 2',2000)">ADD TO CART</button>
+      </div>
+     
+
+
+      <div>
+        <img src="https://images.unsplash.com/photo-1601762603339-fd61e28b698a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGZhc2hpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500" alt="">
+        <h1>GRAY COAT 2</h1>
+        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+        <p>PRICE-2300.00</p>
+        <button onclick="addToCart('GRAY COAT',2300)">ADD TO CART</button>
+      </div>
+     
+
+      <div>
+        <img src="https://plus.unsplash.com/premium_photo-1675186049366-64a655f8f537?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNsb3RoaW5nfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500 " alt="">
+        <h1>PINK COAT</h1>
+        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+        <p>PRICE-2100.00</p>
+        <button onclick="addToCart('PINK COAT',2100)">ADD TO CART</button>
+      </div>
+    </section>
+  </div>
+
+  <!--TOYS DIV SECTION-->
+  <div id="toys-div">
+    <section id="toys-section">
+
+      <div>
+        <img src="https://m.media-amazon.com/images/I/81ap+We87nL._UF1000,1000_QL80_.jpg" alt="">
+        <h1>R.C LAMBORGINI CAR</h1>
+        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+        <p>PRICE-1200.00</p>
+        <button onclick="addToCart('R.C LAMBORGINI CAR',1200)">ADD TO CART</button>
+      </div>
+
+      <div>
+        <img src="https://m.media-amazon.com/images/I/61Ny+lQg+TL._AC_UF1000,1000_QL80_.jpg" alt="">
+        <h1>R.C MONSTER CAR </h1>
+        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+        <p>PRICE-1500.00</p>
+        <button onclick="addToCart('R.C MONSTER CAR', 1500)">ADD TO CART</button>
+      </div>
+
+
+
+      <div>
+        <img src="https://img.cdnx.in/273060/download-2025-01-07T122019638-1736233020512.jpeg?width=600&format=webp" alt="">
+        <h1>R.C MONSTER CAR</h1>
+        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+        <p>PRICE-1900.00</p>
+        <button onclick="addToCart('R.C MONSTER CAR',1900)">ADD TO CART</button>
+      </div>
+
+
+
+      <div>
+        <img src="https://toyloft.in/cdn/shop/files/RCremotecontrolcar_1.jpg?v=1712824294" alt="">
+        <h1>R.C SPRINT CAR</h1>
+        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+        <p>PRICE-2000.00</p>
+        <button onclick="addToCart('R.C SPRINT CAR', 2000)">ADD TO CART</button>
+      </div>
+
+
+      <div>
+        <img src="https://electrobotic.in/cdn/shop/files/rccar4x4remotecontrolcaroffroader4wheelsorangecolour.jpg?v=1694520909" alt="">
+        <h1>R.C MONSTER CAR</h1>
+        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+        <p>PRICE-2000.00</p>
+        <button onclick="addToCart('RC MONSTER CAR',2000)">ADD TO CART</button>
+      </div>
+
+
+      <div>
+        <img src="https://i.pinimg.com/736x/96/0d/c6/960dc6720ea16daaa174ff704475c1f2.jpg" alt="">
+        <h1>R.C ROBOT CAR 1</h1>
+        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+        <p>PRICE-1900.00</p>
+        <button onclick="addToCart('RC ROBOT CAR',1900)">ADD TO CART</button>
+      </div>
+
+      <div>
+        <img src="https://sc04.alicdn.com/kf/H26e2ce4c74c24ff7a8fa46f501309e80j.jpg_350x350.jpg" alt="">
+        <h1>ROYAL R.C CAR</h1>
+        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+        <p>PRICE-2700.00</p>
+        <button onclick="addToCart('ROYAL RC CAR',2700)">ADD TO CART</button>
+      </div>
+
+
+      <div>
+        <img src="https://rcdrone.top/cdn/shop/products/S3a66caa7fd9445999bac17d5ffebb0460.jpg?v=1684066494&width=1445" alt="">
+        <h1>R.C POLICE CAR 1</h1>
+        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+        <p>PRICE-1000.00</p>
+        <button onclick="addToCart('R.C POLICE CAR',1000)">ADD TO CART</button>
+      </div>
+
+
+      <div>
+        <img src="https://m.media-amazon.com/images/I/81dd2+t37RL.jpg" alt="">
+        <h1>R.C ROBOT CAR 1</h1>
+        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+        <p>PRICE-2100.00</p>
+        <button onclick="addToCart('R.C ROBOT CAR',2100)">ADD TO CART</button>
+      </div>
+
+
+      <div>
+        <img src="https://m.media-amazon.com/images/I/81B+5zYrNML._UF894,1000_QL80_.jpg" alt="">
+        <h1>R.C ROBOT CAR 2</h1>
+        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+        <p>PRICE-2000.00</p>
+        <button onclick="addToCart('R.C ROBOT CAR 2',2000)">ADD TO CART</button>
+      </div>
+
+      <div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8yDLMiQ2maMwYHRd8rOIFOCFNDO_gxaQrNg&s" alt="">
+        <h1>R.C DESCOLIGHT CAR</h1>
+        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+        <p>PRICE-1000.00</p>
+        <button onclick="addToCart('R.C DESCOLIGHT CAR',1000)">ADD TO CART</button>
+      </div>
+    </section>
+  </div>
+
+
+
+  <div id="watches-div">
+<section id="watches-section">
+ 
+  <div>
+    <img src="https://funkytradition.com/cdn/shop/files/classic-digital-waterproof-sports-watches-for-men-and-women-funkytradition-926532_f89c4d1b-fc0b-482a-8e32-ed2970d21d84.jpg?v=1723521536" alt="">
+    <h1>SPORT WATCH 1</h1>
+    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+    <p>PRICE-600.00</p>
+    <button onclick="addToCart('SPORT WATCH',600)">ADD TO CART</button>
+  </div>
+
+
+  
+  <div>
+    <img src="https://rukminim2.flixcart.com/image/480/640/xif0q/watch/2/s/b/1-stcouple11-swiss-trend-men-women-original-imagpy8nrmphcdzt.jpeg?q=90" alt="">
+    <h1>ANALOG WATCH</h1>
+    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+    <p>PRICE-1000.00</p>
+    <button onclick="addToCart('ANALOG WATCH',1000)">ADD TO CART</button>
+  </div>
+
+
+
+  
+  <div>
+    <img src="https://m.media-amazon.com/images/I/81otdI7iCgL._UF894,1000_QL80_.jpg" alt="">
+    <h1>PINDOWS DIGITAL WATCH</h1>
+    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+    <p>PRICE-900.00</p>
+    <button onclick="addToCart('PINDOWS DIGITAL WATCH',900)">ADD TO CART</button>
+  </div>
+
+
+  
+  <div>
+    <img src="https://m.media-amazon.com/images/I/81k3Ebo9yIL._AC_SY300_QL30_.jpg" alt="">
+    <h1>PINNDOWS DIGITAL WATCH 2</h1>
+    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+    <p>PRICE-1000.00</p>
+    <button onclick="addToCart('PINDOWS DIGITAL WATCH 2',)">ADD TO CART</button>
+  </div>
+
+
+  
+  <div>
+    <img src="https://m.media-amazon.com/images/I/61pIzNaNRWL.jpg" alt="">
+    <h1>BLACK FIRE BOLT WATCH</h1>
+    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+    <p>PRICE-4000.00</p>
+    <button onclick="addToCart('BLACK FIRE BOLT WATCH',4000)">ADD TO CART</button>
+  </div>
+
+
+
+  
+  <div>
+    <img src="https://image.made-in-china.com/202f0j00lkNWhVqyECfR/2022-Ws1-New-Bluetooth-Call-Smart-Watch-Men-Music-Player-Waterproof-Sports-Fitness-Tracker.webp" alt="">
+    <h1>FIRE BOLT WATCH</h1>
+    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+    <p>PRICE-4100.00</p>
+    <button onclick="addToCart('FIRE BOLT WATCH', 4100)">ADD TO CART</button>
+  </div>
+
+
+
+  
+  <div>
+    <img src="https://www.livemint.com/lm-img/img/2023/10/13/600x338/amazon_sale_1697199696130_1697199696343.jpg" alt="">
+    <h1>SMART WATCH </h1>
+    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+    <p>PRICE-3000.00</p>
+    <button onclick="addToCart('SMART WATCH', 3000)">ADD TO CART</button>
+  </div>
+</section>
+  </div>
+
+  <div id="shoes-div">
+    <section id="shoes-section">
+
+      
+  <div>
+    <img src="https://rukminim2.flixcart.com/image/480/580/xif0q/shoe/d/v/0/7-turbo-7-brainer-white-original-imah7y5w7cxdh2rs.jpeg?q=90" alt="">
+    <h1>NIKE JORDAN 1</h1>
+    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+    <p>PRICE-1200.00</p>
+    <button onclick="addToCart('NIKE JORDAN 1',1200 )">ADD TO CART</button>
+  </div>
+
+  <div>
+    <img src="https://calcetto.in/cdn/shop/files/PIX_5297copy.jpg?v=1744199891&width=1500" alt="">
+    <h1>NIKE AIR JORDAN 1</h1>
+    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+    <p>PRICE-1500.00</p>
+    <button onclick="addToCart('NIKE AIR JORAN 1', 1500)">ADD TO CART</button>
+  </div>
+
+  <div>
+    <img src="https://m.media-amazon.com/images/I/71f3BmjCwtL._UY1000_.jpg" alt="">
+    <h1>CAMPASS SPORT 1</h1>
+    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+    <p>PRICE-1000.00</p>
+    <button onclick="addToCart('CAMPASS SPORT 1', 1000)">ADD TO CART</button>
+  </div>
+
+
+
+  <div>
+    <img src="https://redtape.com/cdn/shop/files/RLL0308A_1_14cd7d6d-cb2b-44cd-8fa7-7e5645e52645.jpg?v=1758879069" alt="">
+    <h1>CASUAL  SNEAKER 1</h1>
+    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+    <p>PRICE-1200.00</p>
+    <button onclick="addToCart('CASUAL SNEAKER 1',1200 )">ADD TO CART</button>
+  </div>
+
+
+
+  <div>
+    <img src="https://redtape.com/cdn/shop/files/RSL0187A_2_jpg_6cb04d77-c650-45ae-9ab5-8ed07c797e25.jpg?v=1756809824" alt="">
+    <h1>RED TAPE CAUAL </h1>
+    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+    <p>PRICE-2000.00</p>
+    <button onclick="addToCart('RED TAPE CAUAL', 2000)">ADD TO CART</button>
+  </div>
+
+
+
+  <div>
+    <img src="https://redtape.com/cdn/shop/files/RSO3481_1.jpg?v=1755861159" alt="">
+    <h1>SPORT WALKING RED TAPE</h1>
+    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+    <p>PRICE-1000.00</p>
+    <button onclick="addToCart('SPORT WALKING RED TAPE',1000 )">ADD TO CART</button>
+  </div>
+
+
+  <div>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8Hebewa9LBy1mvh_lGPzo4rgs3XS6Qq6B2Q&s" alt="">
+    <h1>RED TAPE CASUAL 2</h1>
+    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae odit debitis dicta officia totam sint modi cumque vel consequuntur?</p>
+    <p>PRICE-2100.00</p>
+    <button onclick="addToCart('RED TAPE CASUAL 2',2100 )">ADD TO CART</button>
+  </div>
+    </section>
+  </div>
+</main>
+ 
+
+
+
+
+<div id="myabout">
+  <p style="font-family: Tahoma, arial, helvertica;">Hey! I'm <span> Aarambh Daksh</span> — a full-stack web developer from Muzaffarnagar, with a strong focus on building modern, responsive, and high-performance websites and web apps.
+
+     My core skills include:
+     <span>- Frontend: HTML, CSS, JavaScript, React
+         - Backend: Python</span>
+     
+     I’m passionate about solving real-world problems through code, and always eager to learn new technologies and improve my craft.
+     
+     Looking for collaboration or freelance work? Let’s connect!
+     </p>
+     <img id="certificate" style="width: 350px; border:2px dashed black; box-shadow: 0 10px 30px black;" src="certficate1.jpeg" alt="my certificate">
+ </div>
+
+<footer id="contact">
+  <P style="margin: 10px 0;">CONNECT WITH ME-:</P>
+  <DIV id="footer-div">
+    <a href="https://www.instagram.com/shivaniprajapati6158?igsh=MXRsdnRib3V5bnJodw==&utm_source=ig_contact_invite" target="_blank">INSTAGRAM</a>
+    <a href="https://youtube.com/@codewithpratyaksh?si=el-J9n7U0HLc9ePV" target="_blank">YOUTUBE</a>
+    <a href="https://t.me/Aarambh_daksh7676" target="_blank">TELEGRAM X</a>
+    
+  </DIV>
+  
+ 
+
+  <div id="my-footer-img">
+    <a href="https://www.instagram.com/shivaniprajapati6158?igsh=MXRsdnRib3V5bnJodw==&utm_source=ig_contact_invite">
+        <img src="data:image/jpeg;base64,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" alt="insta logo">
+       </a>
+
+    <a href="https://youtube.com/@codewithpratyaksh?si=el-J9n7U0HLc9ePV">
+        <img src="https://goodly.co.in/wp-content/uploads/2023/10/youtube-logo-png-46016-1.png" alt="youtube logo">
+    </a>
+
+    <a href="https://t.me/Aarambh_daksh7676">
+        <img src="https://cdn6.aptoide.com/imgs/b/7/e/b7e3387e9c01dc5cbccc6493fdd4a24e_icon.png" alt="telegram x logo">
+    </a>
+</div>
+
+
+  <p id="my-footer">©  2025 My web all rights reserved</p>
+</footer>
+</body>
+
+<script>
+     const cartIcon = document.getElementById("cart-icon");
+ const cartPopup = document.getElementById("cart-popup");
+ const cartCount = document.getElementById("cart-count");
+
+ function updateCartCount() {
+   const cart = JSON.parse(localStorage.getItem("cart")) || [];
+   cartCount.textContent = cart.length;
+ }
+
+ function addToCart(name, price, img) {
+   let cart = JSON.parse(localStorage.getItem("cart")) || [];
+   cart.push({ name, price, img });
+   localStorage.setItem("cart", JSON.stringify(cart));
+   updateCartCount(); // update count after adding
+ }
+
+ function showCart() {
+   const cart = JSON.parse(localStorage.getItem("cart")) || [];
+   cartPopup.innerHTML = "";
+
+   if (cart.length === 0) {
+     cartPopup.innerHTML = "<p>🛍️ Cart abhi khaali hai</p>";
+   } else {
+     let total = 0;
+     cart.forEach((item, index) => {
+       total += item.price;
+       const div = document.createElement("div");
+       div.classList.add("cart-item");
+       div.innerHTML = `
+         
+         <div>
+           <h4>${item.name}</h4>
+           <p>₹${item.price}</p>
+         </div>
+         <button class="delete-btn" onclick="deleteItem(${index})">❌</button>
+       `;
+       cartPopup.appendChild(div);
+     });
+     const totalDiv = document.createElement("div");
+     totalDiv.classList.add("total");
+     totalDiv.textContent = `Total: ₹${total}`;
+     cartPopup.appendChild(totalDiv);
+   }
+
+   cartPopup.style.display =
+     cartPopup.style.display === "block" ? "none" : "block";
+ }
+
+ function deleteItem(index) {
+   let cart = JSON.parse(localStorage.getItem("cart")) || [];
+   cart.splice(index, 1);
+   localStorage.setItem("cart", JSON.stringify(cart));
+   updateCartCount(); // update count after delete
+   showCart(); // refresh popup
+ }
+
+ cartIcon.addEventListener("click", showCart);
+
+ // Click outside popup closes it
+ window.addEventListener("click", function(e) {
+   if (!cartPopup.contains(e.target) && !cartIcon.contains(e.target)) {
+     cartPopup.style.display = "none";
+   }
+ });
+
+ // Initialize cart count on page load
+ updateCartCount();
+
+
+
+
+
+ //image slider code
+
+ const images = [ "img1.jpeg", "img2.jpeg", "img3.jpeg", "img4.jpeg", "img5.jpeg", "img6.jpeg", "img7.jpeg", "img8.jpeg", "img9.jpeg", "img10.jpeg", "img11.jpeg", "img12.jpeg", "img13.jpeg"];
+let index = 0;
+const imgElement = document.getElementById("slider");
+
+setInterval(() => {
+  index = (index + 1) % images.length;
+  imgElement.style.opacity = 0;
+
+  setTimeout(() => {
+    imgElement.src = images[index];
+    imgElement.style.opacity = 1;
+  }, 500);
+}, 3000);
+
+
+
+
+
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js')
+    .then(() => console.log('Service Worker Registered'))
+    .catch(err => console.log('SW registration failed:', err));
+  }
+
+</script>
+</html>

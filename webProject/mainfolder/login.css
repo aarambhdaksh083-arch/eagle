@@ -1,0 +1,40 @@
+/*login form css*/
+body {
+    font-family: Arial;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .form-box {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px gray;
+  }
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  button {
+    width: 100%;
+    padding: 10px;
+    background: #a200ff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  button:hover { 
+    background: #5c00b3; 
+}
+button:active{
+  background-color: indigo;
+}
+
+
